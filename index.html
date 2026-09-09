@@ -25,23 +25,54 @@
         }
 
         .container {
-            max-width: 900px;
+            max-width: 950px;
             margin: 0 auto;
             padding: 40px 20px;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 30px;
+            padding: 32px;
             border-radius: 8px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
             margin-bottom: 24px;
         }
 
+        /* Profile Header Layout */
+        .hero-container {
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column-reverse;
+                align-items: center;
+            }
+            .profile-img {
+                width: 180px;
+                height: 210px;
+            }
+        }
+
         h1 {
             color: var(--primary);
             margin-top: 0;
-            font-size: 2em;
+            font-size: 2.1em;
         }
 
         h2 {
@@ -50,12 +81,24 @@
             padding-bottom: 8px;
             margin-top: 0;
             margin-bottom: 20px;
-            font-size: 1.3em;
+            font-size: 1.35em;
             letter-spacing: 0.5px;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.05em;
+            margin-top: 18px;
+            margin-bottom: 8px;
         }
 
         p {
             margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.95em;
         }
 
         .links {
@@ -119,7 +162,7 @@
         }
 
         .award {
-            color: #d69e2e;
+            color: #b7791f;
             font-size: 0.9em;
             font-weight: 600;
         }
@@ -136,21 +179,34 @@
 
 <div class="container">
 
-    <!-- Header / About Section -->
+    <!-- Header / About Section with Profile Picture -->
     <div class="card">
-        <h1>Hi, I'm Dr. Aliaa Alnaggar</h1>
-        <p>
-            I am an Assistant Professor in the Industrial and Systems Engineering Department at Rochester Institute of Technology (RIT)[cite: 1]. Prior to joining RIT, I was an Assistant Professor in Industrial Engineering at Toronto Metropolitan University (TMU) and an affiliate of the Data Science and Analytics Program[cite: 1]. I hold a Ph.D. and MASc in Management Sciences from the University of Waterloo, co-supervised by Prof. Fatma Gzara and Prof. Jim Bookbinder[cite: 1]. I was also a Postdoctoral Fellow in Operations Management at the Rotman School of Management, University of Toronto, collaborated with Prof. Andre Cire and Prof. Adam Diamant, and was awarded the NSERC Postdoctoral Fellowship[cite: 1].
-        </p>
-        <p>
-            My research focuses on leveraging operations research and analytics techniques to optimize service design and operations in uncertain environments, with particular emphasis on crowdsourced delivery, the sharing economy, healthcare systems, transportation, and sustainability[cite: 1]. My methodological expertise includes distributionally robust optimization, stochastic programming, dynamic programming, Markov decision processes, reinforcement learning, and machine learning integration into optimization frameworks[cite: 1].
-        </p>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Hi, I'm Dr. Aliaa Alnaggar</h1>
+                <p>
+                    I'm an Assistant Professor in the Industrial and Systems Engineering Department at Rochester Institute of Technology (RIT) and an Adjunct Assistant Professor at the University of Waterloo. I hold a Ph.D. and MASc in Management Sciences from the University of Waterloo, where I was co-supervised by Prof. Fatma Gzara and Prof. Jim Bookbinder. Prior to my current role, I was an Assistant Professor in Industrial Engineering at Toronto Metropolitan University (TMU) and a Postdoctoral Fellow in Operations Management at the Rotman School of Management, University of Toronto, where I collaborated with Prof. Andre Cire and Prof. Adam Diamant and was awarded the NSERC Postdoctoral Fellowship.
+                </p>
+                <p>
+                    My research focuses on leveraging operations research and analytics techniques to optimize service design and operations in uncertain environments, with particular emphasis on last-mile delivery, the sharing economy, and healthcare systems. Additionally, my work explores developing innovative methodologies for modeling and solving complex optimization problems under uncertainty, that are applicable to a wide-range of practical problems. My methodological expertise includes distributionally robust optimization, stochastic programming, Markov decision processes, and machine learning integration into optimization frameworks.
+                </p>
+                <p>Welcome to my website!</p>
 
-        <div class="links">
-            <span><strong>Connect:</strong></span>
-            <a href="mailto:amaeie@rit.edu">Email (amaeie@rit.edu)</a>[cite: 1]
-            <a href="https://scholar.google.ca/citations?user=-GCfsyEAAAAJ&hl=en" target="_blank">Google Scholar</a>
-            <a href="https://www.linkedin.com/in/aliaa-alnaggar-6a53931a" target="_blank">LinkedIn</a>
+                <div class="contact-info">
+                    <strong>Office:</strong> 81 Lomb Memorial Drive, Rochester, NY, 14623<br>
+                    <strong>Email:</strong> amaeie [at] rit.edu
+                </div>
+
+                <div class="links">
+                    <a href="https://www.rit.edu" target="_blank">RIT Department Webpage</a>
+                    <a href="https://scholar.google.ca/citations?user=-GCfsyEAAAAJ&hl=en" target="_blank">Google Scholar</a>
+                    <a href="https://www.linkedin.com/in/aliaa-alnaggar-6a53931a" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="profile.jpg" alt="Dr. Aliaa Alnaggar" class="profile-img">
+            </div>
         </div>
     </div>
 
@@ -163,7 +219,7 @@
                 <span class="item-title">Rochester Institute of Technology (RIT)</span>
                 <span class="item-date">Aug 2026 – Present</span>
             </div>
-            <div class="item-sub">Assistant Professor, Department of Industrial and Systems Engineering | Rochester, NY, USA</div>
+            <div class="item-sub">Assistant Professor, Industrial and Systems Engineering Department | Rochester, NY, USA</div>
         </div>
 
         <div class="item">
@@ -172,6 +228,7 @@
                 <span class="item-date">Jan 2023 – Aug 2026</span>
             </div>
             <div class="item-sub">Assistant Professor, Department of Mechanical and Industrial Engineering | Toronto, ON, Canada</div>
+            <div class="item-sub">Affiliated with the Data Science and Analytics Program</div>
         </div>
 
         <div class="item">
@@ -188,6 +245,7 @@
                 <span class="item-date">Sept 2021 – Dec 2022</span>
             </div>
             <div class="item-sub">Postdoctoral Fellow in Operations Management | Toronto, ON, Canada</div>
+            <div class="item-sub">Recipient of NSERC Postdoctoral Fellowship | Advisors: Dr. Andre Cire and Dr. Adam Diamant</div>
         </div>
     </div>
 
@@ -200,8 +258,9 @@
                 <span class="item-title">University of Waterloo</span>
                 <span class="item-date">Aug 2021</span>
             </div>
-            <div class="item-sub">Ph.D. in Management Sciences, Faculty of Engineering</div>
+            <div class="item-sub">Ph.D. in Management Sciences, Faculty of Engineering | Waterloo, ON, Canada</div>
             <div class="item-sub"><em>Dissertation: Optimization under Uncertainty for E-retail Distribution: From Suppliers to the Last-Mile</em></div>
+            <div class="item-sub">Advisors: Dr. Fatma Gzara and Dr. James Bookbinder</div>
         </div>
 
         <div class="item">
@@ -209,7 +268,7 @@
                 <span class="item-title">University of Waterloo</span>
                 <span class="item-date">Aug 2017</span>
             </div>
-            <div class="item-sub">MASc in Management Sciences, Faculty of Engineering</div>
+            <div class="item-sub">MASc in Management Sciences, Faculty of Engineering | Waterloo, ON, Canada</div>
             <div class="item-sub"><em>Dissertation: Distribution Planning with Consolidation – a Two-Stage Stochastic Programming Approach</em></div>
         </div>
 
@@ -225,47 +284,47 @@
     <!-- Research Interests -->
     <div class="card">
         <h2>RESEARCH INTERESTS</h2>
-        <p><strong>Methodologies:</strong> Optimization, Stochastic Programming, Dynamic Programming, Markov Decision Processes, Robust Optimization, Distributionally Robust Optimization, Reinforcement Learning, Machine Learning[cite: 1].</p>
-        <p><strong>Applications:</strong> Crowdsourced Delivery, Transportation, Sharing Economy, Healthcare Operations Management, Supply Chain Management, Sustainability[cite: 1].</p>
+        <p><strong>Methodologies:</strong> Optimization, Stochastic programming, Dynamic Programming, Markov Decision Processes, Robust Optimization, Distributionally Robust Optimization, Reinforcement Learning, Machine Learning</p>
+        <p><strong>Applications:</strong> Crowdsourced Delivery, Transportation, Sharing-Economy, Healthcare Operations Management, Supply Chain Management, Sustainability</p>
     </div>
 
-    <!-- Journal Publications -->
+    <!-- Peer-Reviewed Journal Publications -->
     <div class="card">
         <h2>PEER-REVIEWED JOURNAL PUBLICATIONS</h2>
         <ol>
             <li>
-                A. Alnaggar and S. Bhatt (2025) <span class="paper-title">"Fleet Size Planning in Crowdsourced Delivery: Balancing Service Level and Driver Utilization."</span> <span class="journal">Omega</span>, 103445[cite: 1].
-                <div class="award">Finalist in the Gilbert Laporte Student Paper Competition at the CORS 2025 Conference[cite: 1].</div>
+                A. Alnaggar and S. Bhatt* (2025) <span class="paper-title">"Fleet Size Planning in Crowdsourced Delivery: Balancing Service Level and Driver Utilization."</span> <span class="journal">Omega</span>, 103445.
+                <div class="award">Finalist in the Gilbert Laporte Student Paper Competition at the CORS 2025 Conference.</div>
             </li>
             <li>
-                J. Nicholson, F. Gzara and A. Alnaggar (2025) <span class="paper-title">"Unmanned Aerial Vehicle Traffic Network Design with Risk Mitigation."</span> <span class="journal">Transportation Research Part E: Logistics and Transportation Review</span>, 204, 104380[cite: 1].
+                J. Nicholson, F. Gzara and A. Alnaggar (2025) <span class="paper-title">"Unmanned Aerial Vehicle Traffic Network Design with Risk Mitigation."</span> <span class="journal">Transportation Research Part E: Logistics and Transportation Review</span>, 204, 104380.
             </li>
             <li>
-                A. Alnaggar, F. Gzara, and J. H. Bookbinder (2025) <span class="paper-title">"Heatmap Design for Probabilistic Driver Repositioning Crowdsourced Delivery."</span> <span class="journal">Transportation Science</span>, 59(1), 81-103[cite: 1].
+                A. Alnaggar, F. Gzara, and J. H. Bookbinder (2025) <span class="paper-title">"Heatmap Design for Probabilistic Driver Repositioning Crowdsourced Delivery."</span> <span class="journal">Transportation Science</span>, 59(1), 81-103.
             </li>
             <li>
-                S. Helyar and A. Alnaggar (2025) <span class="paper-title">"Air Quality Monitoring and Mitigation through Time-Series Forecasting and Stochastic Optimization."</span> <span class="journal">Journal of Environmental Management</span>, 389, 125540[cite: 1].
+                S. Helyar and A. Alnaggar (2025) <span class="paper-title">"Air Quality Monitoring and Mitigation through Time-Series Forecasting and Stochastic Optimization."</span> <span class="journal">Journal of Environmental Management</span>, 389, 125540.
             </li>
             <li>
-                A. Alnaggar and F. Farrukh (2025) <span class="paper-title">"Distributionally Robust Hospital Capacity Expansion Planning under Stochastic and Correlated Patient Demand."</span> <span class="journal">Computers & Operations Research</span>, 174, 106887[cite: 1].
+                A. Alnaggar and F. Farrukh* (2025) <span class="paper-title">"Distributionally Robust Hospital Capacity Expansion Planning under Stochastic and Correlated Patient Demand."</span> <span class="journal">Computers & Operations Research</span>, 174, 106887.
             </li>
             <li>
-                S. Rafayal and A. Alnaggar (2024) <span class="paper-title">"Optimal Scheduling of Battery Energy Storage System Operations under Load Uncertainty."</span> <span class="journal">Applied Mathematical Modelling</span>, 138, 115756[cite: 1].
+                S. Rafayal and A. Alnaggar (2024) <span class="paper-title">"Optimal Scheduling of Battery Energy Storage System Operations under Load Uncertainty."</span> <span class="journal">Applied Mathematical Modelling</span>, 138, 115756.
             </li>
             <li>
-                A. Alnaggar, F. Gzara, J. H. Bookbinder (2024) <span class="paper-title">"Compensation Guarantees in Crowdsourced Delivery: Impact on Platform and Driver Welfare."</span> <span class="journal">Omega</span>, 122, 102965[cite: 1].
+                A. Alnaggar, F. Gzara, J. H. Bookbinder (2024) <span class="paper-title">"Compensation Guarantees in Crowdsourced Delivery: Impact on Platform and Driver Welfare."</span> <span class="journal">Omega</span>, 122, 102965.
             </li>
             <li>
-                M. Cobbinah and A. Alnaggar (2024) <span class="paper-title">"An Attention Encoder-Decoder Model with the Teacher Forcing Technique for Predicting Consumer Price Index."</span> <span class="journal">Journal of Data, Information, and Management</span>, 6 (1), 65-83[cite: 1].
+                M. Cobbinah* and A. Alnaggar (2024) <span class="paper-title">"An Attention Encoder-Decoder Model with the Teacher Forcing Technique for Predicting Consumer Price Index."</span> <span class="journal">Journal of Data, Information, and Management</span>, 6 (1), 65-83.
             </li>
             <li>
-                S. Rafayal, A. Alnaggar and M. Cevik (2024) <span class="paper-title">"Optimizing electricity peak shaving through stochastic programming and probabilistic time series forecasting."</span> <span class="journal">Journal of Building Engineering</span>, 88, 109163[cite: 1].
+                S. Rafayal, A. Alnaggar and M. Cevik (2024) <span class="paper-title">"Optimizing electricity peak shaving through stochastic programming and probabilistic time series forecasting."</span> <span class="journal">Journal of Building Engineering</span>, 88, 109163.
             </li>
             <li>
-                A. Alnaggar, F. Gzara, J. H. Bookbinder (2021) <span class="paper-title">"Crowdsourced Delivery: A Review of Platforms and Academic Literature."</span> <span class="journal">Omega</span>, 102-139[cite: 1].
+                A. Alnaggar, F. Gzara, J. H. Bookbinder (2021) <span class="paper-title">"Crowdsourced Delivery: A Review of Platforms and Academic Literature."</span> <span class="journal">Omega</span>, 102-139.
             </li>
             <li>
-                A. Alnaggar, F. Gzara, J. H. Bookbinder (2020) <span class="paper-title">"Distribution Planning with Random Demand and Recourse in a Transshipment Network."</span> <span class="journal">EURO Journal on Transportation and Logistics</span>, 9 (1)[cite: 1].
+                A. Alnaggar, F. Gzara, J. H. Bookbinder (2020) <span class="paper-title">"Distribution Planning with Random Demand and Recourse in a Transshipment Network."</span> <span class="journal">EURO Journal on Transportation and Logistics</span>, 9 (1).
             </li>
         </ol>
     </div>
@@ -275,21 +334,281 @@
         <h2>PREPRINTS</h2>
         <ol>
             <li>
-                A. Dehghan, A. Alnaggar, M. Cevik, M. Bodur (2026) <span class="paper-title">"Neural Approximate Dynamic Programming for the Blood Sample Delivery Problem."</span> Submitted to <span class="journal">INFORMS Journal on Data Science</span>[cite: 1].
+                A. Dehghan, A. Alnaggar, M. Cevik, M. Bodur (2026) <span class="paper-title">"Neural Approximate Dynamic Programming for the Blood Sample Delivery Problem."</span> Submitted to <span class="journal">INFORMS Journal on Data Science</span>.
             </li>
             <li>
-                A. Alnaggar, G. Baloch, C. Kouki (2026) <span class="paper-title">"Multi Echelon Perishable Inventory Management under Demand Uncertainty."</span> Submitted to <span class="journal">European Journal of Operational Research</span>[cite: 1].
+                A. Alnaggar, G. Baloch, C. Kouki (2026) <span class="paper-title">"Multi Echelon Perishable Inventory Management under Demand Uncertainty."</span> Submitted to <span class="journal">European Journal of Operational Research</span>.
             </li>
             <li>
-                T. Ramanan, A. Alnaggar, M. Cevik (2026) <span class="paper-title">"Technician Routing and Coordinated Scheduling in the Sharing Economy Considering Workload Equity and Experience Levels."</span> Submitted to <span class="journal">Transportation Research Part E</span>[cite: 1].
+                T. Ramanan, A. Alnaggar, M. Cevik (2026) <span class="paper-title">"Technician Routing and Coordinated Scheduling in the Sharing Economy Considering Workload Equity and Experience Levels."</span> Submitted to <span class="journal">Transportation Research Part E</span>.
             </li>
             <li>
-                S. Rafayal, M. Cevik, A. Alnaggar (2026) <span class="paper-title">"Automated Peak Shaving Methods for Building Energy Management."</span> Submitted to <span class="journal">Expert Systems with Applications Journal</span>[cite: 1].
+                S. Rafayal, M. Cevik, A. Alnaggar (2026) <span class="paper-title">"Automated Peak Shaving Methods for Building Energy Management."</span> Submitted to <span class="journal">Expert Systems with Applications Journal</span>.
             </li>
             <li>
-                A. Alnaggar, M. Cevik (2026) <span class="paper-title">"Stochastic and Distributionally Robust Models for the Supplier Selection and Order Allocation Problem."</span> Book chapter accepted for publication in <span class="journal">New Methods in Supply Chain Management: Data-Driven Techniques</span>[cite: 1].
+                A. Alnaggar, M. Cevik (2026) <span class="paper-title">"Stochastic and Distributionally Robust Models for the Supplier Selection and Order Allocation Problem."</span> Book chapter accepted for publication in <span class="journal">New Methods in Supply Chain Management: Data-Driven Techniques</span>.
             </li>
         </ol>
+    </div>
+
+    <!-- Papers in Progress -->
+    <div class="card">
+        <h2>PAPERS IN PROGRESS</h2>
+        <ul>
+            <li>A. Alnaggar and M. Bodur. <em>"Reformulation Linearization Technique-based Solution Approaches for Solving Two-Stage Distributionally Robust Optimization Problems."</em></li>
+            <li>A. Alnaggar, M. Bodur and E. A. Yildirim. <em>"Reformulation Linearization Technique for Disjoint Bilinear Programs and Characterization of Exact Relaxations."</em></li>
+            <li>A. Alnaggar, A. Cire and A. Diamant. <em>"Two-stage Distributionally Robust Optimization for Network Rebalancing."</em></li>
+            <li>A. Alnaggar, M. Cevik. <em>"Optimizing Mass Casualty Evacuations Under Uncertainty Considering Spatiotemporal Dynamics of Casualties and Resources."</em></li>
+            <li>A. Alnaggar and M. Cevik. <em>"A Predict-then-Optimize Approach for Ambulance Dispatch Centre Expansion Planning Considering Response Time Uncertainty and Incident Priority."</em></li>
+            <li>A. Dehghan, A. Alnaggar, M. Cevik, M. Bodur. <em>"Partially Adaptive Multistage Stochastic Programming for Hospital Surge Capacity Planning."</em></li>
+            <li>A. Alnaggar, G. Baloch and G. Taherkhani. <em>"Stochastic Last-mile Delivery with Heterogeneous Crowdsourced Capacity."</em></li>
+        </ul>
+    </div>
+
+    <!-- Industry Technical Reports -->
+    <div class="card">
+        <h2>INDUSTRY TECHNICAL REPORTS</h2>
+        <ol>
+            <li>D. Neghab, A. Alnaggar and M. Cevik (2025). <em>"Battlefield Evacuation Optimization during a Mass Casualty Incidents."</em> Final grant report to Veterans Affairs Canada.</li>
+            <li>S. Bhatt, A. Alnaggar (2025). <em>"Exploring the Canadian Market Landscape for Machine Learning Solutions in the Legaltech Industry."</em> Report to Sino Legaltech Inc., Mitacs Business Strategy Internship Program.</li>
+            <li>A. Alnaggar, J.H. Bookbinder (2019). <em>"Improving Vehicle Utilization in Truckload Transportation with Driver Regulatory Constraints."</em> Report to Challenger Motor Freight, NSERC Engage Project.</li>
+            <li>F. Pourhossein, A. Alnaggar, J.H. Bookbinder (2017). <em>"Evaluating the Use of Cross-docks for Optimized Deliveries to Loblaws Stores."</em> Report to Loblaws, NSERC Engage Project.</li>
+            <li>A. Alnaggar, F. Pourhossein, J.H. Bookbinder (2016). <em>"A Risk Evaluation Model for Network Design Modifications: An Inverse Optimization Technique."</em> Report to Canadian Tire, NSERC Engage Project.</li>
+        </ol>
+    </div>
+
+    <!-- Conference Presentations & Proceedings -->
+    <div class="card">
+        <h2>CONFERENCE PRESENTATIONS, EXTENDED ABSTRACTS, AND PROCEEDINGS</h2>
+        <ol>
+            <li>Learning-Based Dynamic Dispatch for Time-Critical Blood Sample Collection. Invited talk, INFORMS Annual Meeting, Nov. 2026, San Francisco, CA, USA.</li>
+            <li>Multi-Echelon Perishable Inventory Management under Demand Uncertainty. Invited talk, INFORMS Annual Meeting, Nov. 2026, San Francisco, CA, USA.</li>
+            <li>Forecasting Intraday USD/CAD Exchange Rate with News-Derived Monetary-Policy Signals. Accepted Conference Paper, 36th IEEE International Conference on Collaborative Advances in Software and Computing (CASCON 2026), Nov. 2026, Toronto, Ontario, Canada.</li>
+            <li>Convexification Methods for Solving Two-Stage Distributionally Robust Optimization with Applications to Crowdsourced Delivery. Invited talk, INFORMS Annual Meeting, Oct. 2025, Atlanta, GA, USA.</li>
+            <li>Leveraging Decoupling in Robust Network Rebalancing. Invited talk, INFORMS Annual Meeting, Oct. 2025, Atlanta, GA, USA.</li>
+            <li>Multi-Echelon Perishable Inventory Management under Demand Uncertainty. Invited talk, CORS Conference, Jun. 2025, Edmonton, AB, Canada.</li>
+            <li>Technician Routing and Coordinated Scheduling in the Sharing Economy Considering Workload Equity and Experience Levels. Invited talk, CORS Conference, Jun. 2025, Edmonton, AB, Canada.</li>
+            <li>Two-Stage Distributionally Robust Optimization for Service Region Design in Crowdsourced Delivery. Invited talk, INFORMS Computing Society Conference, Mar. 2025, Toronto, ON, Canada.</li>
+            <li>Fleet Size Planning in Crowdsourced Delivery: Balancing Service Level and Driver Utilization. Invited talk, INFORMS Computing Society Conference, Mar. 2025, Toronto, ON, Canada.</li>
+            <li>Fleet Size Planning in Crowdsourced Delivery: Balancing Service Level and Driver Utilization. Invited talk, Smart Freight Symposium, Nov. 2024, Hamilton, ON, Canada.</li>
+            <li>Two-Stage Distributionally Robust Optimization for Service Region Design in Crowdsourced Delivery. Invited talk, INFORMS Annual Meeting, Oct. 2024, Seattle, WA, USA.</li>
+            <li>Two-Stage Distributionally Robust Optimization for Service Region Design in Crowdsourced Delivery. Invited talk, International Symposium on Mathematical Programming, Jul. 2024, Montreal, Canada.</li>
+            <li>Worker Pool Size Planning in Crowdsourced Delivery: Balancing Service Level and Driver Compensation Standards. Canadian Operational Research Society (CORS) Annual Meeting, Jun. 2024, London, Canada.</li>
+            <li>Two-stage Distributionally Robust Optimization for Network Balancing Problems. Invited talk, Canadian Operational Research Society (CORS) Annual Meeting, Jun. 2024, London, Canada.</li>
+            <li>Heatmap design for probabilistic driver repositioning in crowdsourced delivery. INFORMS Transportation Science and Logistics, Jul. 2023, Chicago, IL.</li>
+            <li>Two-stage Distributionally Robust Optimization for Scarce Resource Allocation. Invited talk, INFORMS Healthcare, Jul. 2023, Toronto, ON.</li>
+            <li>Dynamic Matching with Driver Compensation Guarantees in Crowdsourced Delivery. INFORMS Manufacturing & Service Operations Management, Jun. 2023, Montreal, Canada.</li>
+            <li>Two-Stage Distributionally Robust Optimization for Service Region Design in Crowdsourced Delivery. Invited talk, Sustainable and Emerging Supply Chain and Logistics Seminar Defence Research and Development Canada, June 2023, Toronto, Canada.</li>
+            <li>Two-Stage Distributionally Robust Optimization for Service Region Design in Crowdsourced Delivery. Canadian Operational Research Society (CORS) Annual Meeting, May 2023, Montreal, Canada.</li>
+            <li>Two-stage Distributionally Robust Optimization for Network Balancing Problems. Invited talk, INFORMS Annual Meeting, Oct. 2022, Indianapolis, IND.</li>
+            <li>Two-stage Distributionally Robust Optimization for Network Balancing Problems. Invited talk, Canadian Operational Research Society (CORS) Annual Meeting, Jun. 2022, Vancouver, Canada.</li>
+            <li>Dynamic Matching with Driver Compensation Guarantees in Crowdsourced Delivery. INFORMS Annual Meeting, Oct. 2021, Anaheim, CA.</li>
+            <li>Dynamic Matching with Driver Welfare Considerations in Crowdsourced Delivery. Canadian Operational Research Society (CORS) Annual Meeting, Jun. 2021, Virtual Conference.</li>
+            <li>Balancing Supply and Demand in a Crowdsourced Delivery System. INFORMS Annual Meeting, Nov. 2020, Virtual Conference.</li>
+            <li>Crowdsourced Delivery: State-of-the-art with Applications to Omnichannel Supply Chains. Invited talk, INFORMS Annual Meeting, Oct. 2019, Seattle, WA.</li>
+            <li>Distribution Planning with Random Demand and Recourse in a Transshipment Network. Canadian Operational Research Society (CORS) Annual Meeting, May 2019, Saskatoon, SK, Canada.</li>
+            <li>Distribution Planning with Consolidation - A Two-Stage Stochastic Programming Approach. Proceedings of 7th Odysseus workshop on Freight Transportation and Logistics, 2018, Cagliari, Italy, pp. 75-78.</li>
+        </ol>
+    </div>
+
+    <!-- Research Grants & Funding -->
+    <div class="card">
+        <h2>RESEARCH GRANTS, FUNDING AND AWARDS</h2>
+        
+        <h3>Faculty Grants & Awards</h3>
+        <ul>
+            <li><strong>Startup Funds</strong> (2026–2029) — Award Value: ~$143,000 USD | Rochester Institute of Technology, Kate Gleason College of Engineering</li>
+            <li><strong>Veterans Affairs Canada (PI)</strong> (Feb 2025–Nov 2025) — Award Value: 60,000 CAD (~$43,250 USD) | <em>Battlefield Evacuation Optimization during a Mass Casualty Incident</em> (Co-PI: Dr. Mucahit Cevik)</li>
+            <li><strong>NSERC Discovery Grant (PI)</strong> (2024–2029) — Award Value: 170,000 CAD (~$122,500 USD) | <em>Optimization Models for Crowdsourced Delivery Design and Operations Under Uncertainty</em></li>
+            <li><strong>NSERC Discovery Launch Supplement for ECR (PI)</strong> (2024–2029) — Award Value: 12,500 CAD (~$9,000 USD)</li>
+            <li><strong>Startup Funds</strong> (2023–2028) — Award Value: 100,000 CAD (~$72,120 USD) | Toronto Metropolitan University FEAS</li>
+            <li><strong>Dean Research Fund Travel</strong> (2023–2024) — Award Value: 2,000 CAD (~$1,440 USD) | Toronto Metropolitan University</li>
+            <li><strong>Mitacs Business Strategy Internship Program (Supervisor)</strong> (2024) — Award Value: 10,000 CAD (~$7,210 USD)</li>
+            <li><strong>Transportation Science Meritorious Service Award</strong> (2024) — INFORMS Transportation Science Journal Editorial Board</li>
+        </ul>
+
+        <h3>Prior Grants & Awards</h3>
+        <ul>
+            <li>NSERC Postdoctoral Fellowship (2022–2023) — $45,000/year</li>
+            <li>University of Toronto Scarborough Postdoctoral Fellowship (2022–2023) — Declined ($22,500/year)</li>
+            <li>CORS Student Paper Competition - Second Place (2021)</li>
+            <li>NSERC Alexander Graham Bell Canada Graduate Scholarship-Doctoral (2019–2021) — $35,000/year</li>
+            <li>University of Waterloo President’s Graduate Scholarship (2018–2021) — $20,000</li>
+            <li>Management Sciences Outstanding Teaching Assistant Award (2019)</li>
+            <li>Ontario Graduate Scholarship (2018–2019) — $15,000</li>
+            <li>Provost Doctoral Entrance Award (2017–2018) — $5,000</li>
+            <li>Elgabbani Scholarship (2015) — $750</li>
+            <li>Faculty of Engineering Graduate Scholarship (2015) — $3,000</li>
+            <li>University of Waterloo Graduate Merit Scholarship (2014–2015) — $2,000</li>
+            <li>International Masters Student Award (2014–2015) — $1,800</li>
+            <li>Dean’s Honor List (2008–2010)</li>
+        </ul>
+    </div>
+
+    <!-- Teaching -->
+    <div class="card">
+        <h2>TEACHING</h2>
+        
+        <div class="item">
+            <div class="item-title">RIT - ISEE 601: Systems Modeling and Optimization (Instructor)</div>
+            <div class="item-sub">Term Taught: Fall 2026 | Class Size: 10</div>
+            <p>Introductory graduate course covering Operations Research techniques for modeling and solving complex decision problems using deterministic and stochastic methodologies, implemented with commercial solvers like Gurobi.</p>
+        </div>
+
+        <div class="item">
+            <div class="item-title">TMU - IND 604: Operations Research II (Instructor)</div>
+            <div class="item-sub">Terms Taught: Winter 2023, Winter 2024, Winter 2025 | Class Size: 55-60 | Avg Evaluation: 4.7 / 5.0</div>
+            <p>Core 3rd-year IE course covering integer programming, dynamic programming, queuing theory, and stochastic processes with Python and Gurobi project implementation.</p>
+        </div>
+
+        <div class="item">
+            <div class="item-title">TMU - IND 405: Introduction to Data Science and Analytics (Instructor)</div>
+            <div class="item-sub">Terms Taught: Fall 2023, Fall 2024, Fall 2025 | Class Size: 50-60 | Avg Evaluation: 4.7 / 5.0</div>
+            <p>Core 3rd-year IE course on Python programming, statistical analysis, data visualization, and fundamental machine learning (clustering, regression, classification).</p>
+        </div>
+
+        <div class="item">
+            <div class="item-title">TMU - IND 816: Service Operations Management (Instructor)</div>
+            <div class="item-sub">Terms Taught: Winter 2024, Winter 2025 | Class Size: 35-40 | Avg Evaluation: 4.9 / 5.0</div>
+            <p>4th-year elective course using business case studies to cover service design, project management, quality, change management, and revenue management.</p>
+        </div>
+
+        <div class="item">
+            <div class="item-title">UW - MSCI 434: Supply Chain Management (Co-instructor)</div>
+            <div class="item-sub">Term Taught: Spring 2019 | Class Size: 55-60</div>
+            <p>Core 3rd-year management engineering course focusing on analytic tools to design, implement, and sustain competitive supply chain systems.</p>
+        </div>
+
+        <h3>Teaching Assistantships (University of Waterloo)</h3>
+        <ul>
+            <li>MSCI 331: Introduction to Optimization (Winter 2015)</li>
+            <li>MSCI 431: Stochastic Models and Methods (Winter 2017)</li>
+            <li>MSCI 434: Supply Chain Management (Spring 2015, 2017, 2018)</li>
+            <li>MSCI 603: Principles of Operations Research (Fall 2017)</li>
+            <li>MSCI 605: Organizational Theory & Behaviour (Fall 2015)</li>
+        </ul>
+    </div>
+
+    <!-- Student Supervision -->
+    <div class="card">
+        <h2>STUDENT SUPERVISION</h2>
+        
+        <h3>Postdoctoral Fellows</h3>
+        <ul>
+            <li><strong>Davood Neghab</strong>, Industrial Engineering, TMU (co-supervised with Dr. Mucahit Cevik, Mar 2025 – Dec 2025)</li>
+            <li><strong>Arash Dehghan-Kooshkghazi</strong>, Industrial Engineering, TMU (co-supervised with Dr. Mucahit Cevik and Dr. Merve Bodur, Oct 2025 – Present)</li>
+        </ul>
+
+        <h3>PhD Students</h3>
+        <ul>
+            <li><strong>Maya Kodeih</strong>, Industrial Engineering, TMU (co-supervised with Dr. Mucahit Cevik, Fall 2025 – Present)</li>
+        </ul>
+
+        <h3>MASc Thesis Students</h3>
+        <ul>
+            <li><strong>Ananya Riddha</strong>, Industrial Engineering, TMU (co-supervised with Dr. Wahab Ismail, Expected Aug 2026)</li>
+            <li><strong>Thesan Ramanan</strong>, Industrial Engineering, TMU (Graduated Dec 2025) — <em>Technician Routing and Coordinated Scheduling in the Sharing Economy: Balancing Workload Equity and Experience Levels</em></li>
+            <li><strong>Sahil Bhatt</strong>, Industrial Engineering, TMU (Graduated Aug 2024) — <em>Optimizing Fleet Size Management in Crowdsourced Delivery: Balancing Platform Service Levels and Driver Utilization</em></li>
+            <li><strong>Alice Yang</strong>, Data Science, TMU (co-supervised with Dr. Mucahit Cevik, Graduated Sept 2024) — <em>Markov Decision Process Models for the Multiperiod Newsvendor Problem with Service-Dependent Demand</em></li>
+        </ul>
+
+        <h3>MEng Project Students</h3>
+        <ul>
+            <li>David Giuggio (Industrial Engineering, Apr 2025)</li>
+            <li>Sheritz Sogbesan (Data Science, Apr 2025)</li>
+            <li>Simon Helyar (Data Science, Aug 2024)</li>
+            <li>Anthony Tortola (Data Science, Aug 2024)</li>
+            <li>Jonathan Duong (Data Science, Aug 2024)</li>
+            <li>Faiza Farrukh (Data Science, Aug 2023)</li>
+            <li>Maame Cobbinah (Data Science, Aug 2023)</li>
+            <li>Rupinder Singh (Data Science, Aug 2023)</li>
+            <li>Faiza Noor (Data Science, Aug 2023)</li>
+        </ul>
+
+        <h3>Student Research Collaborations & RAs</h3>
+        <ul>
+            <li>Jeremy Nicholson (MASc, UW, Jan 2024)</li>
+            <li>Syed Rafayal (PhD, TMU, Aug 2023)</li>
+            <li>Yasmina Ndjamo (UG RA, TMU, Oct 2024 – Apr 2025)</li>
+            <li>Jude Abu Khajil (UG RA, TMU, Jan 2024 – Aug 2024)</li>
+        </ul>
+
+        <h3>Capstone Projects Supervised (BEng IE at TMU)</h3>
+        <ul>
+            <li>Yu Yi Lim & Anthony Pacione (Apr 2025)</li>
+            <li>Inayat Amin & Natnael Aklilu (Apr 2025)</li>
+            <li>Cleon Draper & Sadeed Zawaneh (Apr 2025)</li>
+            <li>Marvin Rafo & Abdullah Al-Muhandes (Apr 2025)</li>
+            <li>Jude Abu Khajil & Rouda Habbal (Apr 2024)</li>
+            <li>Luke Ruivo, Jashan Bola & Thomas Cox (Apr 2024)</li>
+            <li>Mert Arslantas (Apr 2024)</li>
+        </ul>
+    </div>
+
+    <!-- Professional Service -->
+    <div class="card">
+        <h2>SERVICE</h2>
+
+        <h3>Editorial and Conference Activities</h3>
+        <ul>
+            <li>Chair of CORS Undergraduate Student Paper Competition (2025)</li>
+            <li>Session Chair of "Optimization Under Uncertainty in Service Systems", INFORMS 2025 Annual Meeting</li>
+            <li>Panelist in "Mobilizing Justice: Supply Side Equity for Rideshare Drivers" webinar (Jul 2024)</li>
+            <li>Panelist in "Preparing for Your First Teaching Role", CORS Conference (2023)</li>
+            <li>Student Paper Competition Judge: CORS open category (2023), CORS Healthcare SIG (2023), CORS undergraduate category (2024), CP-AI-OR (2022, 2023)</li>
+            <li>Federal Grant Reviewer: Canada Research Chair Program, NSERC Discovery Grant Program, Mitacs Accelerate Program</li>
+            <li>Session Chair & Organizer: INFORMS 2022 ("Network Optimization Problems Under Uncertainty"), INFORMS 2021 ("Transportation in the Gig Economy")</li>
+            <li>Ad-hoc reviewer for: <em>Transportation Science, European Journal of Operational Research, Service Science, Omega, Transportation Research Part B/C/E, Computers & Operations Research, EURO Journal on Transportation and Logistics, INFOR, CP-AI-OR</em></li>
+        </ul>
+
+        <h3>University & Department Services</h3>
+        <ul>
+            <li>Panelist in TMU GRADTalks: "Thinking Ahead: Is a postdoctoral fellowship in your future?" (Feb 2025)</li>
+            <li>Panelist in NSERC Discovery Grant Information Session at TMU (Jun 2024)</li>
+            <li>Department Representative at TMU Faculty Association (2023–2025)</li>
+            <li>FEAS Website Redesign Audit Group Representative (2023–2025)</li>
+            <li>Banting Postdoctoral Fellowships Review Committee Member (2023–2024)</li>
+            <li>MIME Department Graduate Scholarship and Award Committee Member (2023–2024)</li>
+        </ul>
+
+        <h3>PhD & MASc Committees</h3>
+        <ul>
+            <li>Parisa Hajialirezai (PhD Committee, TMU, 2024–2028)</li>
+            <li>Monzer Alharairi (PhD Committee, TMU, 2024–2028)</li>
+            <li>Karen Natalie Penaranda Valdivia (PhD Committee, TMU, 2024–2027)</li>
+            <li>Jorge Restrepo Diaz (PhD Committee, TMU, 2023–2026)</li>
+            <li>Matthew Lisondra (MASc Examining Committee, TMU, 2024)</li>
+            <li>Jeremy Nicholson (MASc Examining Committee, UW, 2023–2024)</li>
+        </ul>
+
+        <h3>PhD Examination Chair</h3>
+        <ul>
+            <li>Jack Abedisi (PhD Candidacy Exam, Architectural Sciences, TMU, 2025)</li>
+            <li>Yuhong Liu (PhD Candidacy Exam, Industrial Engineering, TMU, 2024)</li>
+            <li>Sanjeev Phull (PhD Defence, Biomedical Engineering, TMU, 2024)</li>
+            <li>Ebrahim Sharifi (PhD Preliminary Exam, Industrial Engineering, TMU, 2023)</li>
+            <li>J. Sayaka Kamei (PhD Candidacy Exam, Industrial Engineering, TMU, 2023)</li>
+        </ul>
+
+        <h3>Community & Outreach</h3>
+        <ul>
+            <li>The Operations Research Challenge (TORCH) Waterloo Outreach Lead (2017–2020)</li>
+            <li>CORS Waterloo Student Chapter President (2019–2021)</li>
+        </ul>
+    </div>
+
+    <!-- Skills & Societies -->
+    <div class="card">
+        <h2>TECHNICAL SKILLS & MEMBERSHIPS</h2>
+        <p><strong>Programming & Data Analysis:</strong> Python, MATLAB, R, SQL</p>
+        <p><strong>Optimization Solvers & Tools:</strong> GUROBI, CPLEX, GAMS, Hexaly</p>
+        <p><strong>Professional Memberships:</strong></p>
+        <ul>
+            <li>Institute for Operations Research and the Management Sciences (INFORMS)</li>
+            <li>Canadian Operational Research Society (CORS)</li>
+            <li>Women in Operations Research and the Management Sciences (WORMS)</li>
+            <li>Mathematical Optimization Society (MOS)</li>
+        </ul>
     </div>
 
     <footer>
